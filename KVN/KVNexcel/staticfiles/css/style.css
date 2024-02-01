@@ -1,0 +1,327 @@
+body {
+    background: #a5a8a6;
+    font-family: 'Roboto', sans-serif;
+    color: #0f0e0e;
+}
+
+a{
+    text-decoration: none;
+    color: #27EF9F;
+}
+
+a:hover{
+    text-decoration: none;
+    color: #27EF9F;
+}
+
+.login-box {
+    padding-top: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    height: auto;
+    background: #1A2226;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.login-key {
+    height: 100px;
+    font-size: 80px;
+    line-height: 100px;
+    background: -webkit-linear-gradient(#27EF9F, #27EF9F);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.login-title {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 2px;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.login-form {
+    margin-top: 25px;
+    text-align: left;
+}
+
+input[type=text] {
+    background-color: #1A2226;
+    border: none;
+    border-bottom: 2px solid #27EF9F;
+    border-top: 0px;
+    border-radius: 0px;
+    font-weight: bold;
+    outline: 0;
+    margin-bottom: 20px;
+    padding-left: 0px;
+    color: #FFFFFF;
+}
+
+input[type=email] {
+    background-color: #1A2226;
+    border: none;
+    border-bottom: 2px solid #27EF9F;
+    border-top: 0px;
+    border-radius: 0px;
+    font-weight: bold;
+    outline: 0;
+    margin-bottom: 20px;
+    padding-left: 0px;
+    color: #FFFFFF;
+}
+
+input[type=password] {
+    background-color: #1A2226;
+    border: none;
+    border-bottom: 2px solid #27EF9F;
+    border-top: 0px;
+    border-radius: 0px;
+    font-weight: bold;
+    outline: 0;
+    padding-left: 0px;
+    margin-bottom: 20px;
+    color: #FFFFFF;
+}
+
+input[type=password1] {
+    background-color: #1A2226;
+    border: none;
+    border-bottom: 2px solid #27EF9F;
+    border-top: 0px;
+    border-radius: 0px;
+    font-weight: bold;
+    outline: 0;
+    padding-left: 0px;
+    margin-bottom: 20px;
+    color: #FFFFFF;
+}
+
+.form-group {
+    margin-bottom: 40px;
+    outline: 0px;
+}
+
+.form-control:focus {
+    border-color: inherit;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-bottom: 2px solid #27EF9F;
+    outline: 0;
+    background-color: #1a2622;
+    color: #FFFFFF;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 0 0;
+}
+
+label {
+    margin-bottom: 0px;
+}
+
+.form-control-label {
+    font-size: 10px;
+    color: #FFFFFF;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.btn-outline-primary {
+    border-color: #27EF9F;
+    background-color: #27EF9F;
+    color: #ffffff;
+    font-weight: bold;
+    letter-spacing: 1px;
+    width: 100%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.btn-outline-primary:hover {
+    background-color: #27EF9F;
+    border-color: #27EF9F;
+    right: 0px;
+}
+
+.login-btm {
+    float: left;
+}
+
+.login-button {
+    padding-right: 0px;
+    text-align: right;
+    margin-bottom: 25px;
+}
+
+.login-text {
+    text-align: left;
+    padding-left: 0px;
+    color: #FFFFFF;
+}
+
+.loginbttm {
+    padding: 0px;
+}
+
+.navbar{
+    background-color: #1A2226;
+}
+
+#passwordstrength-wrap {
+    background-color: #1A2226;
+    color: #ffffff;
+    display: none;
+    padding: 10px;
+    font-size: 14px;
+    position: absolute;
+    width: 320px;
+    top: 250px;
+    left: 570px;
+}
+#passwordstrength-wrap:before, #passwordstrength-wrap:after {
+    content: ' ';
+    height: 0;
+    position: absolute;
+    width: 0;
+    border: 10px solid transparent;
+}
+#passwordstrength-wrap:before {
+    border-bottom: 7px solid rgba(0, 0, 0, 0);
+    border-right: 7px solid rgba(0, 0, 0, 0.1);
+    border-top: 7px solid rgba(0, 0, 0, 0);
+    content: '';
+    display: inline-block;
+    left: -18px;
+    position: absolute;
+    top: 10px;
+}
+#passwordstrength-wrap:after {
+    border-bottom: 6px solid rgba(0, 0, 0, 0);
+    border-right: 6px solid #fff;
+    border-top: 6px solid rgba(0, 0, 0, 0);
+    content: '';
+    display: inline-block;
+    left: -16px;
+    position: absolute;
+    top: 11px;
+}
+#passwordstrength-wrap ul {
+    list-style-type: none;
+    margin: 5px 0 0;
+    padding: 0;
+}
+#passwordstrength-wrap ul li:before {
+    content: '· ';
+    font-size: 16px;
+    padding-right: 9px;
+}
+#passwordstrength-wrap ul li.valid:before {
+    content: '✔ ';
+    font-size: 16px;
+    padding-right: 0;
+}
+#passwordstrength-wrap ul li.valid {
+    color: #27EF9F;
+}
+
+#passwordstrength-wrap-2 {
+    background-color: #1A2226;
+    color: #ffffff;
+    display: none;
+    padding: 10px;
+    font-size: 14px;
+    position: absolute;
+    width: 320px;
+    top: 15px;
+    left: 570px;
+}
+#passwordstrength-wrap-2:before, #passwordstrength-wrap-2:after {
+    content: ' ';
+    height: 0;
+    position: absolute;
+    width: 0;
+    border: 10px solid transparent;
+}
+#passwordstrength-wrap-2:before {
+    border-bottom: 7px solid rgba(0, 0, 0, 0);
+    border-right: 7px solid rgba(0, 0, 0, 0.1);
+    border-top: 7px solid rgba(0, 0, 0, 0);
+    content: '';
+    display: inline-block;
+    left: -18px;
+    position: absolute;
+    top: 10px;
+}
+#passwordstrength-wrap-2:after {
+    border-bottom: 6px solid rgba(0, 0, 0, 0);
+    border-right: 6px solid #fff;
+    border-top: 6px solid rgba(0, 0, 0, 0);
+    content: '';
+    display: inline-block;
+    left: -16px;
+    position: absolute;
+    top: 11px;
+}
+#passwordstrength-wrap-2 ul {
+    list-style-type: none;
+    margin: 5px 0 0;
+    padding: 0;
+}
+#passwordstrength-wrap-2 ul li:before {
+    content: '· ';
+    font-size: 16px;
+    padding-right: 9px;
+}
+#passwordstrength-wrap-2 ul li.valid:before {
+    content: '✔ ';
+    font-size: 16px;
+    padding-right: 0;
+}
+#passwordstrength-wrap-2 ul li.valid {
+    color: #27EF9F;
+}
+
+#toggle1{
+    position: absolute;
+    top: 240px;
+    right: 30px;
+    color: #808080;
+    cursor: pointer;
+}
+
+#toggle2{
+    position: absolute;
+    top: 320px;
+    right: 30px;
+    color: #808080;
+    cursor: pointer;
+}
+
+#toggle3{
+    position: absolute;
+    top: 87px;
+    right: 30px;
+    color: #808080;
+    cursor: pointer;
+}
+
+#toggle4{
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    color: #808080;
+    cursor: pointer;
+}
+
+#toggle5{
+    position: absolute;
+    top: 87px;
+    right: 30px;
+    color: #808080;
+    cursor: pointer;
+}

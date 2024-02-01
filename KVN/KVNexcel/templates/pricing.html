@@ -1,0 +1,146 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subscription Page</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+   .text-center{
+    color:green;
+    font-size:32px;
+    font-weight:bold;
+
+    }
+    footer {
+      background-color: #343a40; 
+      color: #ffffff; 
+    }
+    footer a {
+      color: green; 
+      font-size:20px;
+    }
+    h4{
+      color: #ffffff;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body style="font-family: 'Glory', sans-serif;">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#"><img width="40px" height="40px" src="{% static 'images/logo.PNG' %}">KVN Excel</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item ">
+          <a class="nav-link" href="{% url 'home' %}">Courses<span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="{% url 'adv' %}">Advanced<span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="{% url 'hyb'%}">Hybrid<span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="{% url 'pricing'%}">Pricing<span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+      <div class="form-inline my-2 my-lg-0">
+          <a href="{% url 'Login' %}"class="btn btn-outline-success">Login</a>
+          <a href="{% url 'Register' %}"class="btn btn-outline-success">Sign-up</a>
+          
+      </div>
+
+    </div>
+  </nav>
+  <div class="container mt-5">
+    <h2 class="text-center">Subscription Plans</h2>
+    <div class="row mt-4">
+      <!-- Basic Training Card -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="{% static 'images/IMG_1.PNG' %}" class="card-img-top" alt="Basic Training">
+          <div class="card-body">
+            <h5 class="card-title">Basic Plan</h5>
+            <p class="card-text"><b>Kshs:500</b></p>
+            <a href="{% url 'initiate_payment'%}" class="btn btn-outline-success ">Process Payment</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Advanced Training Card -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="{% static 'images/IMG_8.PNG' %}" class="card-img-top" alt="Advanced Training">
+          <div class="card-body">
+            <h5 class="card-title">Advanced Plan</h5>
+            <p class="card-text"><b>Kshs:800</b></p>
+            <a href="{% url 'initiate_payment'%}" class="btn btn-outline-success">Process Payment</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hybrid Card -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="{% static 'images/IMG_7.PNG' %}" class="card-img-top" alt="Hybrid">
+          <div class="card-body">
+            <h5 class="card-title">Hybrid Plan</h5>
+            <p class="card-text"><b>Kshs:1800</b></p>
+            <a href="{% url 'initiate_payment' %}" class="btn btn-outline-success ">Process Payment</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-5">
+    <footer class="row">
+      <div class="col-md-4">
+        <h4>Contacts</h4>
+        <p>Email: contact@example.com</p>
+        <p>Phone: +123456789</p>
+        <p>Address: 123 Main St, City</p>
+      </div>
+      <div class="col-md-4">
+        <h4>Important Links</h4>
+        <ul class="list-unstyled">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Services</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h4>Email Feedback</h4>
+        <p>We'd love to hear from you. Please provide your feedback below:</p>
+        <form>
+          <div class="form-group">
+            <input type="email" class="form-control" placeholder="Your Email">
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" placeholder="Your Feedback"></textarea>
+          </div>
+          <button type="submit" class="btn btn-outline-success">Submit</button>
+        </form>
+      </div>
+    
+    <div class="text-center mt-3">
+      <p>&copy; 2023 KVN Excel. All rights reserved.</p>
+      <a href="#">Developed by Twizard Developers</a>
+      
+    </div>
+  </div>
+</footer>
+
+  <!-- Bootstrap JS (Optional, only required for certain Bootstrap features) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,229 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microsoft Excel Advantages</title>
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" type="text/css" href="{% static 'home.css' %}">
+
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     <script src="{% static 'fontawesomefree/js/all.min.js' %}"></script>
+     <link href="{% static 'fontawesomefree/css/all.min.css' %}" rel="stylesheet" type="text/css">
+
+
+     <style>
+        .display-4{
+          font-size:32px;
+          font-weight:bold;
+      
+          }
+         
+          footer {
+            background-color: #343a40; 
+            color: #ffffff; 
+          }
+          footer a {
+            color: green; 
+            font-size:20px;
+          }
+          h4{
+            color: #ffffff;
+            font-weight: bold;
+          }
+    
+       .whatsapp-button {
+        display: inline-block;
+        background-color: #25d366;
+        color: #fff;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    
+    .whatsapp-button img {
+        vertical-align: middle;
+        margin-right: 10px;
+    }
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px; /* Adjust the desired distance from the bottom */
+      right: 20px; /* Adjust the desired distance from the right */
+      z-index: 1000; /* Adjust the z-index to ensure it's above other content */
+      background-color: #25d366; /* Background color for the button */
+      color: #fff; /* Text color for the button */
+      padding: 10px 20px; /* Adjust the padding as needed */
+      border-radius: 5px; /* Adjust the border radius as needed */
+      text-align: center;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+    }
+    
+    
+      </style>
+</head>
+<body style="font-family: 'Glory', sans-serif;">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#"><img width="40px" height="40px" src="{% static 'images/logo.PNG' %}">KVN Excel</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item ">
+            <a class="nav-link" href="{% url 'home' %}">Courses<span class="sr-only"></span></a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="{% url 'adv' %}">Advanced<span class="sr-only"></span></a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="{% url 'hyb'%}">Hybrid<span class="sr-only"></span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="{%url 'corp'%}">Corporate Training<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="https://docs.google.com/spreadsheets/u/0/">Excel Playground<span class="sr-only"></span></a>
+          </li>
+        </ul>
+        <div class="form-inline my-2 my-lg-0">
+            <a href="{% url 'Login' %}"class="btn btn-outline-success">Login</a>
+           
+            
+        </div>
+
+      </div>
+    </nav>
+    <div class="container mt-5">
+        <h1 class="display-4">Microsoft Excel Advantages</h1>
+        <p class="lead">Microsoft Excel provides a wide array of advantages to employees across different sectors and job roles. Here's a breakdown of its practical applications:</p>
+
+        <h2>Efficient Data Management</h2>
+        <p>Excel aids employees in efficiently organizing and overseeing data, making it suitable for tasks like maintaining contact lists, inventories, and project progress records.</p>
+
+        <h2>Data Analysis</h2>
+        <p>Employees can harness Excel for in-depth data analysis, encompassing calculations, statistical evaluations, and the creation of charts and graphs, facilitating data-driven decision-making.</p>
+
+        <h2>Financial Control</h2>
+        <p>Excel is extensively used for financial activities such as budgeting, expense tracking, and intricate financial modeling, allowing employees to conduct complex calculations with ease.</p>
+
+        <h2>Time Management</h2>
+        <p>Excel equips employees with tools like calendars, schedules, and to-do lists, enabling effective time management through the creation of tailored calendars and project timelines.</p>
+
+        <h2>Professional Reporting</h2>
+        <p>Employees can generate polished reports and presentations using Excel's formatting and visualization capabilities, especially valuable for sharing information with colleagues and superiors.</p>
+
+        <h2>Task Automation</h2>
+        <p>Excel empowers employees to automate repetitive tasks by utilizing macros and formulas, resulting in time savings and decreased risks associated with data entry errors.</p>
+
+        <h2>Project Oversight</h2>
+        <p>Excel can be employed for project planning and tracking, including the creation of Gantt charts that aid in visualizing project timelines and dependencies.</p>
+
+        <h2>Inventory Management</h2>
+        <p>In sectors like retail and manufacturing, Excel serves as a tool for monitoring inventory levels, ensuring product availability, and optimizing order management processes.</p>
+
+        <h2>Data Visualization</h2>
+        <p>With its charting features, Excel simplifies data presentation, making complex information more comprehensible for employees.</p>
+
+        <h2>Collaboration</h2>
+        <p>Excel offers collaboration features that enable multiple employees to collaborate on the same spreadsheet concurrently, promoting teamwork and productivity.</p>
+
+        <h2>Data Handling</h2>
+        <p>Excel facilitates the import of data from various sources and allows for easy export to other formats, streamlining data exchange between different software applications.</p>
+
+        <h2>Tailored Solutions</h2>
+        <p>Excel's high degree of customization empowers employees to create templates tailored to their specific requirements, making it adaptable to a diverse range of tasks and industries.</p>
+    </div>
+    <a href="https://wa.me/254799095185" class="whatsapp-button" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+        Chat with us on WhatsApp
+      </a>
+
+    
+
+    
+    <div class="container mt-5">
+      <footer class="row">
+        <div class="col-md-4">
+          <h4>Contacts</h4>
+          <p><i class="fa-solid fa-envelope"></i>   kvictornick@gmail.com</p>
+          <p><i class="fa-solid fa-phone"></i>   +254799095185</p>
+          <p> <i class="fa-solid fa-location-dot"></i> Westlands,Nairobi</p>
+        </div>
+        <div class="col-md-4">
+          <h4>Important Links</h4>
+          <ul class="list-unstyled">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="{% url 'adv' %}">Courses</a></li>
+            <li><a href="#">Articles</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h4>Email Feedback</h4>
+          <p>We'd love to hear from you. Please provide your feedback below:</p>
+          <form>
+            <div class="form-group">
+              <input type="email" class="form-control" placeholder="Your Email">
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" placeholder="Your Feedback"></textarea>
+            </div>
+            <button type="submit" class="btn btn-outline-success">Submit</button>
+
+            
+          </form>
+
+          <!-- Add this HTML to your webpage -->
+
+
+        </div>
+        
+      
+      <div class="text-center mt-3">
+        <p>&copy; 2023 KVN Excel. All rights reserved.</p>
+        <a href="#">Developed by Twizard Developers</a>
+        
+      </div>
+    </div>
+</footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../../../dist/js/bootstrap.min.js"></script>
+    <script src="../../../../assets/js/vendor/holder.min.js"></script>
+    <script>
+      Holder.addTheme('thumb', {
+        bg: '#55595c',
+        fg: '#eceeef',
+        text: 'Thumbnail'
+      });
+
+      
+        document.querySelector('.whatsapp-button').addEventListener('click', function (event) {
+            event.preventDefault();
+            var whatsappUrl = this.getAttribute('href');
+            window.open(whatsappUrl, 'WhatsAppChat', 'width=500,height=600');
+        });
+    
+    
+    </script>
+          <script type="text/javascript" src="{% static 'js/cart.js' %}"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

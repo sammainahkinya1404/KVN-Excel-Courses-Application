@@ -1,0 +1,141 @@
+{%load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Core Visualization</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+      
+     
+      .card-title{
+        color:white;
+        font-family:times,serif;
+
+      }
+
+      footer {
+        background-color: #343a40; 
+        color: #ffffff; 
+      }
+      footer a {
+        color: green; 
+        font-size:20px;
+      }
+      h4{
+        color: #ffffff;
+        font-weight: bold;
+      }
+
+
+    </style>
+  </head>
+  <body >
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#"><img width="40px" height="40px" src="{% static 'images/logo.PNG' %}">KVN Excel</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'home' %}">Courses<span class="sr-only"></span></a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="{% url 'adv' %}">Advanced<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="{% url 'hyb'%}">Hybrid<span class="sr-only"></span></a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="{% url 'pricing'%}">Pricing<span class="sr-only"></span></a>
+          </li>
+        </ul>
+        <div class="form-inline my-2 my-lg-0">
+           
+            
+        </div>
+
+      </div>
+    </nav>
+    <div class="container mt-5">
+      <div class="row">
+        <!-- Video Card -->
+        <div class="col-md-8">
+          <div class="card mb-4">
+            {% if videos %}
+            <div class="card-body">
+              <video class="card-img-top" width="600" height="400" controls controlsList="nodownload" preload="metadata">
+                <source src="{{ videos.0.video.url }}" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            {% else %}
+            <p>No video courses found.</p>
+            {% endif %}
+          </div>
+        </div>
+    
+        <!-- Text Content -->
+        <div class="col-md-4">
+          <h1><strong>Visualizations</strong></h1>
+          <div class="my-4">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed dolor eget dolor volutpat feugiat. Integer sit amet libero at arcu efficitur consequat. Sed consectetur, turpis eu suscipit mollis, urna elit tincidunt nunc, a iaculis urna libero in risus. Curabitur euismod felis at odio suscipit, non finibus ante rhoncus.
+            </p>
+          </div>
+          <a href="{% url 'initiate_payment'%}" class="btn btn-outline-success">Purchase Now!</a>
+        </div>
+      </div>
+    </div>
+
+      <div class="container mt-5">
+        <footer class="row">
+          <div class="col-md-4">
+            <h4>Contacts</h4>
+            <p>Email: contact@example.com</p>
+            <p>Phone: +123456789</p>
+            <p>Address: 123 Main St, City</p>
+          </div>
+          <div class="col-md-4">
+            <h4>Important Links</h4>
+            <ul class="list-unstyled">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Products</a></li>
+              <li><a href="#">Services</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h4>Email Feedback</h4>
+            <p>We'd love to hear from you. Please provide your feedback below:</p>
+            <form>
+              <div class="form-group">
+                <input type="email" class="form-control" placeholder="Your Email">
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" placeholder="Your Feedback"></textarea>
+              </div>
+              <button type="submit" class="btn btn-outline-success">Submit</button>
+            </form>
+          </div>
+        
+        <div class="text-center mt-3">
+          <p>&copy; 2023 KVN Excel. All rights reserved.</p>
+          <a href="#">Developed by Twizard Developers</a>
+          
+        </div>
+      </div>
+  </footer>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

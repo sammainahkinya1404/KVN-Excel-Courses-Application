@@ -1,0 +1,266 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>KVN Excel Courses</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'home.css' %}">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <script src="{% static 'fontawesomefree/js/all.min.js' %}"></script>
+    <link href="{% static 'fontawesomefree/css/all.min.css' %}" rel="stylesheet" type="text/css">
+    <style>
+      h1{
+       color:green;
+       font-size:32px;
+       font-weight:bold;
+   
+       }
+       footer {
+        background-color: #343a40; 
+        color: #ffffff; 
+      }
+      footer a {
+        color: green; 
+        font-size:20px;
+      }
+      h4{
+        color: #ffffff;
+        font-weight: bold;
+      }
+      .whatsapp-button {
+        display: inline-block;
+        background-color: #25d366;
+        color: #fff;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    
+    .whatsapp-button img {
+        vertical-align: middle;
+        margin-right: 10px;
+    }
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px; /* Adjust the desired distance from the bottom */
+      right: 20px; /* Adjust the desired distance from the right */
+      z-index: 1000; /* Adjust the z-index to ensure it's above other content */
+      background-color: #25d366; /* Background color for the button */
+      color: #fff; /* Text color for the button */
+      padding: 10px 20px; /* Adjust the padding as needed */
+      border-radius: 5px; /* Adjust the border radius as needed */
+      text-align: center;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+    }
+     </style>
+  </head>
+  <body style="font-family: 'Glory', sans-serif;">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#"><img width="40px" height="40px" src="{% static 'images/logo.PNG' %}">KVN Excel</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item ">
+            <a class="nav-link" href="{% url 'home'%}">Basic<span class="sr-only"></span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'adv'%}">Advanced<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="{% url 'hyb'%}">Hybrid<span class="sr-only"></span></a>
+          </li>
+          
+          <li class="nav-item ">
+            <a class="nav-link" href="{% url 'corp' %}">Corporate Training<span class="sr-only"></span></a>
+          </li>
+        </ul>
+        <div class="form-inline my-2 my-lg-0">
+            <a href="{% url 'Login' %}"class="btn btn-outline-success">Login</a>
+            
+        </div>
+
+      </div>
+    </nav>
+
+    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+      <div class="col-md-5 p-small-5 mx-auto my-5">
+        <h5 class="display-4 font-weight-bold">Advanced Excel Training</h5>
+        <p class="lead font-weight-normal">To empower yourself or employees with go-to skills in Data Analysis sector. </p>
+       <p class="lead font-weight-normal">You also get to learn tips and ways of doing work in a simple manner.</p>
+<p class="lead font-weight-normal">Here we have 6 major parts of study as shown below.</p> 
+<a class="btn btn-outline-success"><i class="fa-regular fa-clock"></i>1-2 hrs</a>
+<a class="btn btn-outline-success"><i class="fa-solid fa-user"></i>{{views}} learners enrolled</a>
+      <a class="btn btn-outline-success" href="{% url 'initiate_payment' %}">$100 Buy Now!</a>
+
+
+      </div>
+      <div class="product-device box-shadow d-none d-md-block">
+        <img src="{% static 'images/IMG_8.PNG' %}" >
+      </div>
+      <!-- <div class="product-device product-device-2 box-shadow d-none d-md-block"></div> -->
+    </div>
+
+    <div class="container">
+      <h1>Topics This Level</h1>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <img class="card-img-top" src="{% static 'images/excel thumbnails-01.png'%}" alt="Card image cap">
+            <div class="card-body">
+              <h3 class="card-title"><strong>Formulas</strong></h3>
+              <Button class="btn btn-success"><strong>{{formula_count}} videos</strong> </Button>
+              <a href="{% url 'formulas'%}" class="btn btn-outline-success">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img class="card-img-top" src="{% static 'images/excel thumbnails-04.png'%}" alt="Card image cap">
+            <div class="card-body">
+              <h3 class="card-title"><strong>Visualization</strong></h3>
+              <Button class="btn btn-success"><strong>{{visual_count}} videos</strong> </Button>
+              <a href="{% url 'visual'%}" class="btn btn-outline-success">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img class="card-img-top" src="{% static 'images\excel thumbnails-03.png'%}" alt="Card image cap">
+            <div class="card-body">
+              <h3 class="card-title"><strong>Pivot Tables</strong></h3>
+              <Button class="btn btn-success"><strong>{{pivotal_count}} videos</strong> </Button>
+              <a href="{% url 'pivotal'%}" class="btn btn-outline-success">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img class="card-img-top" src="{% static 'images\excel thumbnails-05.png'%}" alt="Card image cap">
+            <div class="card-body">
+              <h3 class="card-title"><strong>Functions</strong></h3>
+              <Button class="btn btn-success"><strong>{{analysis_count}} videos</strong> </Button>
+              <a href="{% url 'analysis'%}" class="btn btn-outline-success">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+              <img class="card-img-top" src="{% static 'images\excel thumbnails-06.png'%}" alt="Card image cap">
+              <div class="card-body">
+                <h3 class="card-title"><strong>Arrays</strong></h3>
+              <Button class="btn btn-success"><strong>{{array_count}} videos</strong> </Button>
+                <a href="{% url 'arrays'%}" class="btn btn-outline-success">Learn More</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card">
+              <img class="card-img-top" src="{% static 'images\excel thumbnails-10.png'%}" alt="Card image cap">
+              <div class="card-body">
+                <h3 class="card-title"><strong>Power Bi</strong></h3>
+              <Button class="btn btn-success"><strong>{{powerbi_count}} videos</strong> </Button>
+                <a href="{% url 'powerbi'%}" class="btn btn-outline-success">Learn More</a>
+              </div>
+            </div>
+          </div>
+
+      </div>
+    </div>
+    <a href="https://wa.me/254799095185" class="whatsapp-button" target="_blank">
+      <i class="fa-brands fa-whatsapp"></i>
+      Chat with us on WhatsApp
+    </a>
+
+  
+
+  
+  <div class="container mt-5">
+    <footer class="row">
+      <div class="col-md-4">
+        <h4>Contacts</h4>
+        <p><i class="fa-solid fa-envelope"></i>   kvictornick@gmail.com</p>
+        <p><i class="fa-solid fa-phone"></i>   +254799095185</p>
+        <p> <i class="fa-solid fa-location-dot"></i> Westlands,Nairobi</p>
+      </div>
+      <div class="col-md-4">
+        <h4>Important Links</h4>
+        <ul class="list-unstyled">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="{% url 'adv' %}">Courses</a></li>
+          <li><a href="#">Articles</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h4>Email Feedback</h4>
+        <p>We'd love to hear from you. Please provide your feedback below:</p>
+        <form>
+          <div class="form-group">
+            <input type="email" class="form-control" placeholder="Your Email">
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" placeholder="Your Feedback"></textarea>
+          </div>
+          <button type="submit" class="btn btn-outline-success">Submit</button>
+
+          
+        </form>
+
+        <!-- Add this HTML to your webpage -->
+
+
+      </div>
+      
+    
+    <div class="text-center mt-3">
+      <p>&copy; 2023 KVN Excel. All rights reserved.</p>
+      <a href="#">Developed by Twizard Developers</a>
+      
+    </div>
+  </div>
+</footer>
+
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+  <script src="../../../../assets/js/vendor/popper.min.js"></script>
+  <script src="../../../../dist/js/bootstrap.min.js"></script>
+  <script src="../../../../assets/js/vendor/holder.min.js"></script>
+  <script>
+    Holder.addTheme('thumb', {
+      bg: '#55595c',
+      fg: '#eceeef',
+      text: 'Thumbnail'
+    });
+
+    
+      document.querySelector('.whatsapp-button').addEventListener('click', function (event) {
+          event.preventDefault();
+          var whatsappUrl = this.getAttribute('href');
+          window.open(whatsappUrl, 'WhatsAppChat', 'width=500,height=600');
+      });
+  
+  
+  </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

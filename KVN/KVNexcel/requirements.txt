@@ -1,0 +1,15 @@
+alabaster==0.7.13
+allauth-tim==1.0.1
+asgiref==3.7.2
+Babel==2.12.1
+bootstrap4==0.1.0
+cachetools==5.3.1
+certifi==2023.5.7
+cffi==1.15.1
+chardet==5.2.0
+charset-normalizer==3.2.0
+colorama==0.4.6
+crispy-bootstrap3==2022.1
+crispy-bootstrap4==2022.1
+cryptography==41.0.3
+defusedxml==0.7.1

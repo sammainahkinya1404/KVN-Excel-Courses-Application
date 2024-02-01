@@ -1,0 +1,164 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Basic Dashboard</title>
+    <!-- Add Bootstrap 4 CSS (adjust the path to your Bootstrap CSS file) -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+      
+{% comment %}      
+        .card-title{
+          color:white;
+          font-family:times,serif;
+  
+        } {% endcomment %}
+  
+        footer {
+          background-color: #343a40; 
+          color: #ffffff; 
+        }
+        footer a {
+          color: green; 
+          font-size:20px;
+        }
+        h4{
+          color: #ffffff;
+          font-weight: bold;
+        }
+  
+  
+      </style>
+    </head>
+    <body >
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#"><img width="40px" height="40px" src="{% static 'images/logo.PNG' %}">KVN Excel</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Basic-courses<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="{% url 'Dashboard' %}">Dashboard<span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="#">Advanced-courses<span class="sr-only"></span></a>
+            </li>
+           
+          </ul>
+          <div class="form-inline my-2 my-lg-0">
+              <a href="{% url 'Login' %}"class="btn btn-outline-success">Login</a>
+             
+              
+          </div>
+  
+        </div>
+      </nav>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <!-- Side panel -->
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title"> Basic Courses</h5>
+                        <ul class="list-group">
+                            {% for topic in topics %}
+                                <li class="list-group-item"><strong>{{ topic }}</strong></li>
+                                <ul class="list-group">
+                                    {% for course in courses %}
+                                        {% if course.topic == topic %}
+                                            <li class="list-group-item">{{ course.title }}</li>
+                                        {% endif %}
+                                    {% endfor %}
+                                </ul>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <!-- Video player -->
+                <div class="card">
+                    {% for course in courses %}
+                    <div class="card-body">
+                        <h5 class="card-title">{{course.title}}</h5>
+                        <!-- Video player here (customize as needed) -->
+                        <!-- Example: HTML5 video tag with controls -->
+                        <video class="card-img-top" width="600" height="400" controls controlsList="nodownload" preload="metadata">
+                            <source src="{{course.video.url}}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    {%endfor%}
+                </div>
+                <!-- User progress -->
+                <div class="card mt-3">
+                    <div class="card-body">
+                        <h5 class="card-title">User Progress</h5>
+                        <ul class="list-group">
+                            {% for course in courses %}
+                                <li class="list-group-item">
+                                    {{ course.title }} - Progress:
+                                    {% for progress in user_progress %}
+                                        {% if progress.course == course %}
+                                            {{ progress.progress }}%
+                                        {% endif %}
+                                    {% endfor %}
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <footer class="row">
+          <div class="col-md-4">
+            <h4>Contacts</h4>
+            <p>Email: contact@example.com</p>
+            <p>Phone: +123456789</p>
+            <p>Address: 123 Main St, City</p>
+          </div>
+          <div class="col-md-4">
+            <h4>Important Links</h4>
+            <ul class="list-unstyled">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Products</a></li>
+              <li><a href="#">Services</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h4>Email Feedback</h4>
+            <p>We'd love to hear from you. Please provide your feedback below:</p>
+            <form>
+              <div class="form-group">
+                <input type="email" class="form-control" placeholder="Your Email">
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" placeholder="Your Feedback"></textarea>
+              </div>
+              <button type="submit" class="btn btn-outline-success">Submit</button>
+            </form>
+          </div>
+        
+        <div class="text-center mt-3">
+          <p>&copy; 2023 KVN Excel. All rights reserved.</p>
+          <a href="#">Developed by Twizard Developers</a>
+          
+        </div>
+      </div>
+  </footer>
+    <!-- Add Bootstrap 4 JS and jQuery (adjust the paths to your Bootstrap JS and jQuery files) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

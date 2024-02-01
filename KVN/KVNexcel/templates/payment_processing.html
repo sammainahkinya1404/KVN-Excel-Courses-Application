@@ -1,0 +1,93 @@
+{%load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Payment Form</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <style>
+    h1{
+      color: green;
+      font-weight: bold;
+      align:center;
+    }
+    footer {
+      background-color: #343a40; 
+      color: #ffffff; 
+    }
+    footer a {
+      color: green; 
+      font-size:20px;
+    }
+    h4{
+      color: #ffffff;
+      font-weight: bold;
+    }
+  </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#"><img width="40px" height="40px" src="{% static 'images/logo.PNG' %}">KVN Excel</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'home' %}">Courses<span class="sr-only"></span></a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="{% url 'adv' %}">Advanced<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="{% url 'hyb'%}">Hybrid<span class="sr-only"></span></a>
+          </li>
+          
+        </ul>
+        <div class="form-inline my-2 my-lg-0">
+            <a href="{% url 'Login' %}"class="btn btn-outline-success">Login</a>
+           
+            
+        </div>
+
+      </div>
+    </nav>
+    <div class="container">
+        <h1>Payment Processing</h1>
+        <form method="post">
+          Select Plan:
+          {% csrf_token %}
+          <select class="form-control" name="item">
+            {% for item in items %}
+            <option value="{{ item }}">{{ item }}</option>
+            {% endfor %}
+          </select><br>
+         
+          Phone Number: <input type="text" class="form-control" name="phone_number"><br>
+          <button type="submit" class="btn btn-outline-success">Pay with M-Pesa</button>
+        </form>
+      </div>
+
+      <div class="container mt-5">
+        <footer class="row">
+         
+        
+        <div class="text-center mt-3">
+          <p>&copy; 2023 KVN Excel. All rights reserved.</p>
+          <a href="#">Developed by Twizard Developers</a>
+          
+        </div>
+      </div>
+  </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
